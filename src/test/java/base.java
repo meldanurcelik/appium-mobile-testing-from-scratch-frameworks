@@ -13,7 +13,7 @@ public class base {
 	public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
 
 		File appDir = new File("src");
-		File app = new File(appDir, "ApiDemos-debug.apk");
+		File app = new File(appDir, "ApiDemos-debug-old.apk");
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 
