@@ -11,6 +11,12 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- Java Client -->
+        <javaclient.version>7.6.0</javaclient.version>
+        <!-- Selenium Remote Driver -->
+        <seleniumremotedriver.version>3.141.59</seleniumremotedriver.version>
+        <!-- TestNG -->
+        <testng.version>7.5</testng.version>
     </properties>
 
     <dependencies>
@@ -18,28 +24,21 @@
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>7.6.0</version>
+            <version>${javaclient.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-remote-driver</artifactId>
-            <version>3.141.59</version>
+            <version>${seleniumremotedriver.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.5</version>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
 
