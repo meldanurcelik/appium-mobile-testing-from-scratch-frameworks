@@ -13,12 +13,12 @@ public class base {
 	public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
 
 		File appDir = new File("src");
-		File app = new File(appDir, "ApiDemos-debug-old.apk");
+		File app = new File(appDir, "ApiDemos-debug.apk");
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 2 XL API 30");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_2_XL_API_30");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
 		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
