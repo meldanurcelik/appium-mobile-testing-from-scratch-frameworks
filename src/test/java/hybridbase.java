@@ -12,7 +12,8 @@ public class hybridbase {
     public static AndroidDriver<AndroidElement> capabilities(String device) throws MalformedURLException {
 
         File appDir = new File("src");
-        File app = new File(appDir, "ApiDemos-debug.apk");
+        //File app = new File(appDir, "ApiDemos-debug.apk");
+        File app = new File(appDir, "General-Store.apk");
 
         DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -31,6 +32,7 @@ public class hybridbase {
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi Note 8");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
             cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "uiautomator2");
+            cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10);
         }
 
         cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
