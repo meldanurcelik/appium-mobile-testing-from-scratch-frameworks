@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class basics extends hybridbase {
+public class basics extends base_hybrid {
 
 	public static void main(String[] args) throws MalformedURLException {
 

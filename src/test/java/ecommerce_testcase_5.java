@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 
-public class ecommerce_testcase_5 extends hybridbase {
+public class ecommerce_testcase_5 extends base_hybrid {
 
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-public class ecommerce_testcase_1 extends hybridbase {
+public class ecommerce_testcase_1 extends base_hybrid {
 
     public static void main(String[] args) throws MalformedURLException {
 

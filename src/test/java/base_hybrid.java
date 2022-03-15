@@ -7,7 +7,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class hybridbase {
+public class base_hybrid {
 
     public static AndroidDriver<AndroidElement> capabilities(String device) throws MalformedURLException {
 
@@ -23,7 +23,7 @@ public class hybridbase {
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_2_XL_API_30");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-            cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "uiautomator2");
+            cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "UiAutomator2");
 
         } else if (device.equals("real")) {
             //real device
@@ -31,7 +31,7 @@ public class hybridbase {
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi Note 8");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-            cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "uiautomator2");
+            cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "UiAutomator2");
             cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10);
         }
 
