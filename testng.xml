@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="C:/appium-mobile-testing-from-scratch-frameworks/src/test/java/TestNGTutorial">
+
+    <test name="Personal Loan">
         <classes>
-            <class name="TestNGTutorial.demo">
-                <methods>
-                    <include name="Demo"/>
-                    <include name="SecondTest"/>
-                </methods>
-            </class>
-            <class name="TestNGTutorial.demo2">
-                <methods>
-                    <include name="Demo"/>
-                </methods>
-            </class>
+            <class name="TestNGTutorial.demo"></class>
+            <class name="TestNGTutorial.demo2"></class>
+            <class name="TestNGTutorial.loginhome"></class>
         </classes>
     </test>
+
+    <test name="Car Loan">
+        <classes>
+            <class name="TestNGTutorial.logincar"></class>
+        </classes>
+    </test>
+
 </suite>
