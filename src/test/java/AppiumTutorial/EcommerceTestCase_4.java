@@ -33,6 +33,7 @@ public class EcommerceTestCase_4 extends BaseHybrid {
         driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
         driver.findElements(By.xpath("//*[@text='ADD TO CART']")).get(0).click();
         driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
+
         Thread.sleep(4000);
 
         int count = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).size();

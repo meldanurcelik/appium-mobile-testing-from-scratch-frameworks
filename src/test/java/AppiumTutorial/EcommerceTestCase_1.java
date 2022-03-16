@@ -23,4 +23,5 @@ public class EcommerceTestCase_1 extends BaseHybrid {
         driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
 
     }
+
 }

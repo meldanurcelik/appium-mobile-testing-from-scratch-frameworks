@@ -27,4 +27,5 @@ public class EcommerceTestCase_2 extends BaseHybrid {
         Assert.assertEquals("Please enter your name", toastMessage); //Actual validation
 
     }
+
 }

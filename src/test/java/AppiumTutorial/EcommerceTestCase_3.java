@@ -44,4 +44,5 @@ public class EcommerceTestCase_3 extends BaseHybrid {
         Assert.assertEquals("Jordan 6 Rings", lastpageText);
 
     }
+
 }

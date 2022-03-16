@@ -29,4 +29,5 @@ public class Browse extends BaseBrowse {
         Assert.assertEquals(text, "Devops");
 
     }
+
 }

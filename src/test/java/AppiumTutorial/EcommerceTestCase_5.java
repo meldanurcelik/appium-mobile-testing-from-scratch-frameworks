@@ -76,4 +76,5 @@ public class EcommerceTestCase_5 extends BaseHybrid {
 
         return amount2value;
     }
+
 }

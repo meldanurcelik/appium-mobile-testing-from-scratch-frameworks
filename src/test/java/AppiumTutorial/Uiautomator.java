@@ -17,7 +17,7 @@ public class Uiautomator extends Base {
         driver.findElementByAndroidUIAutomator("text(\"Views\")").click();
 
         //validate clickable feature for all options
-        //driver.findElementByAndroidUIAutomator("new UiSelector().property(value)");
+        //driver.findElementByAndroidUIAutomator("new UiSelector().property(value)")
         System.out.println(driver.findElementsByAndroidUIAutomator("new UiSelector().clickable(true)").size());
 
     }

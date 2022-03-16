@@ -2,7 +2,7 @@ package TestNGTutorial;
 
 import org.testng.annotations.Test;
 
-public class loginhome {
+public class LoginHome {
 
     @Test
     public void WebLoginHomeLoan() {

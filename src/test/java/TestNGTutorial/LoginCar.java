@@ -2,7 +2,7 @@ package TestNGTutorial;
 
 import org.testng.annotations.Test;
 
-public class logincar {
+public class LoginCar {
 
     @Test
     public void WebLoginCarLoan() {
@@ -21,4 +21,5 @@ public class logincar {
         //rest API automation
         System.out.println("LoginAPICarLoan");
     }
+
 }

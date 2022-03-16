@@ -36,4 +36,5 @@ public class Gestures extends Base {
         System.out.println(driver.findElementById("android:id/title").isDisplayed());
 
     }
+
 }
