@@ -4,15 +4,23 @@
 
     <test name="Personal Loan">
         <classes>
-            <class name="TestNGTutorial.demo"></class>
-            <class name="TestNGTutorial.demo2"></class>
-            <class name="TestNGTutorial.loginhome"></class>
+            <class name="TestNGTutorial.Demo">
+                <methods>
+                    <exclude name="Demo"></exclude>
+                </methods>
+            </class>
+            <class name="TestNGTutorial.Demo2"></class>
+            <class name="TestNGTutorial.LoginHome"></class>
         </classes>
     </test>
 
     <test name="Car Loan">
         <classes>
-            <class name="TestNGTutorial.logincar"></class>
+            <class name="TestNGTutorial.LoginCar">
+                <methods>
+                    <exclude name="Mobile.*"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 
