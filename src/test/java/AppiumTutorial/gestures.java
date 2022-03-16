@@ -13,7 +13,7 @@ import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import static java.time.Duration.ofSeconds;
 
-public class gestures extends base {
+public class Gestures extends Base {
 
     public static void main(String[] args) throws MalformedURLException {
 

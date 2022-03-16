@@ -9,7 +9,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class base_hybrid {
+public class BaseHybrid {
 
     public static AndroidDriver<AndroidElement> capabilities(String device) throws MalformedURLException {
 

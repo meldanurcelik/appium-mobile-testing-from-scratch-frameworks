@@ -9,7 +9,7 @@ import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-public class ecommerce_testcase_3 extends base_hybrid {
+public class EcommerceTestCase_3 extends BaseHybrid {
 
     public static void main(String[] args) throws MalformedURLException {
 

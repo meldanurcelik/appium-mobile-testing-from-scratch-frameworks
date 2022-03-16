@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 
-public class swipe extends base {
+public class Swipe extends Base {
 
     public static void main(String[] args) throws MalformedURLException {
 

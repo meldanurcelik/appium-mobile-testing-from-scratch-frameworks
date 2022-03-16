@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 
-public class browse extends base_browse {
+public class Browse extends BaseBrowse {
 
     public static void main(String[] args) throws MalformedURLException {
 

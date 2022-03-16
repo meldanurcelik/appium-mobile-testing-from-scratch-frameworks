@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static io.appium.java_client.touch.offset.ElementOption.element;
 
-public class dragdrop extends base {
+public class DragDrop extends Base {
 
     public static void main(String[] args) throws MalformedURLException {
 

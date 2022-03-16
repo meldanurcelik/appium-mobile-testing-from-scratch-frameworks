@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class base_browse {
+public class BaseBrowse {
 
     public static AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
 
