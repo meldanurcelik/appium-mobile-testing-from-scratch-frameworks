@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
 
     <test name="Personal Loan">
+        <parameter name="URL" value="personalloan.com"/>
         <classes>
             <class name="TestNGTutorial.Demo">
                 <methods>
@@ -15,6 +16,7 @@
     </test>
 
     <test name="Car Loan">
+        <parameter name="URL" value="carloan.com"/>
         <classes>
             <class name="TestNGTutorial.LoginCar">
                 <methods>

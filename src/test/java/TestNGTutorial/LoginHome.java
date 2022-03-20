@@ -4,20 +4,12 @@ import org.testng.annotations.*;
 
 public class LoginHome {
 
-    @BeforeClass
-    public void BeforeClass() {
-        System.out.println("before executing any methods in the class");
-    }
-
-    @AfterClass
-    public void AfterClass() {
-        System.out.println("after executing any methods in the class");
-    }
-
+    @Parameters({"URL"})
     @Test(groups = {"Smoke"})
-    public void WebLoginHomeLoan() {
+    public void WebLoginHomeLoan(String urlname) {
         //selenim
         System.out.println("WebLoginHomeLoan");
+        System.out.println(urlname);
     }
 
     @Test
@@ -33,6 +25,16 @@ public class LoginHome {
     }
 
 
+    @BeforeClass
+    public void BeforeClass() {
+        System.out.println("before executing any methods in the class");
+    }
+
+    @AfterClass
+    public void AfterClass() {
+        System.out.println("after executing any methods in the class");
+    }
+
     @BeforeTest
     public void Prerequisite() {
         System.out.println("I will execute first");
@@ -45,13 +47,11 @@ public class LoginHome {
 
     @BeforeSuite
     public void Bsuite() {
-        //appium
         System.out.println("I am no 1");
     }
 
     @AfterSuite
     public void Asuite() {
-        //appium
         System.out.println("I am no 1 from last");
     }
 

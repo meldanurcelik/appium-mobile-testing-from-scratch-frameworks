@@ -1,13 +1,16 @@
 package TestNGTutorial;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginCar {
 
+    @Parameters({"URL"})
     @Test
-    public void WebLoginCarLoan() {
+    public void WebLoginCarLoan(String urlname) {
         //selenim
         System.out.println("WebLoginCarLoan");
+        System.out.println(urlname);
     }
 
     @Test
