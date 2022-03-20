@@ -9,7 +9,7 @@ public class Demo {
         System.out.println("Hello world");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void SecondTest() {
         System.out.println("Bye");
     }

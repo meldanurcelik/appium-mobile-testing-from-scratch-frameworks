@@ -4,7 +4,17 @@ import org.testng.annotations.*;
 
 public class LoginHome {
 
-    @Test
+    @BeforeClass
+    public void BeforeClass() {
+        System.out.println("before executing any methods in the class");
+    }
+
+    @AfterClass
+    public void AfterClass() {
+        System.out.println("after executing any methods in the class");
+    }
+
+    @Test(groups = {"Smoke"})
     public void WebLoginHomeLoan() {
         //selenim
         System.out.println("WebLoginHomeLoan");
