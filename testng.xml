@@ -17,12 +17,9 @@
 
     <test name="Car Loan">
         <parameter name="URL" value="carloan.com"/>
+        <parameter name="APIKey/username" value="123456"/>
         <classes>
-            <class name="TestNGTutorial.LoginCar">
-                <methods>
-                    <exclude name="Mobile.*"></exclude>
-                </methods>
-            </class>
+            <class name="TestNGTutorial.LoginCar"></class>
         </classes>
     </test>
 
