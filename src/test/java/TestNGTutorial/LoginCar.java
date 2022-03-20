@@ -16,19 +16,19 @@ public class LoginCar {
         System.out.println("MobileLoginCarLoan");
     }
 
-    @Test
+    @Test(timeOut = 4000)
     public void MobileSigninCarLoan() {
         //appium
         System.out.println("MobileSigninCarLoan");
     }
 
-    @Test
+    @Test(enabled = false)
     public void MobileSignoutCarLoan() {
         //appium
         System.out.println("MobileSignoutCarLoan");
     }
 
-    @Test
+    @Test(dependsOnMethods = {"WebLoginCarLoan"})
     public void LoginAPICarLoan() {
         //rest API automation
         System.out.println("LoginAPICarLoan");
