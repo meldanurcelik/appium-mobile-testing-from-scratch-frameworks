@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
+    <listeners>
+        <listener class-name="TestNGTutorial.Listeners"></listener>
+    </listeners>
+
     <test name="Personal Loan">
         <parameter name="URL" value="personalloan.com"/>
         <classes>

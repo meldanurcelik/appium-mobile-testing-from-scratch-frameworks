@@ -1,5 +1,6 @@
 package TestNGTutorial;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class LoginHome {
@@ -22,6 +23,7 @@ public class LoginHome {
     public void LoginAPIHomeLoan() {
         //rest API automation
         System.out.println("LoginAPIHomeLoan");
+        Assert.assertTrue(false);
     }
 
 
