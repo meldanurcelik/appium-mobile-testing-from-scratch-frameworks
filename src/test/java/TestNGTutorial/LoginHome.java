@@ -23,7 +23,7 @@ public class LoginHome {
     public void LoginAPIHomeLoan() {
         //rest API automation
         System.out.println("LoginAPIHomeLoan");
-        Assert.assertTrue(false);
+        //Assert.assertTrue(false);
     }
 
 
