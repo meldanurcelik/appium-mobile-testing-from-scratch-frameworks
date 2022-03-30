@@ -14,8 +14,8 @@ public class BaseHybrid {
     public static AndroidDriver<AndroidElement> capabilities(String device) throws MalformedURLException {
 
         File appDir = new File("src");
-        //File app = new File(appDir, "ApiDemos-debug.apk");
-        File app = new File(appDir, "General-Store.apk");
+        File app = new File(appDir, "ApiDemos-debug.apk");
+        //File app = new File(appDir, "General-Store.apk");
 
         DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -23,7 +23,7 @@ public class BaseHybrid {
             //emulator
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
-            cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_2_XL_API_30");
+            cap.setCapability(MobileCapabilityType.DEVICE_NAME, "pixel_2");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
             cap.setCapability(MobileCapabilityType.APPLICATION_NAME, "UiAutomator2");
 
