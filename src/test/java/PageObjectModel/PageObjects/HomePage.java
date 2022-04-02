@@ -1,4 +1,4 @@
-package AppiumTutorial.pageObjects;
+package PageObjectModel.PageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
