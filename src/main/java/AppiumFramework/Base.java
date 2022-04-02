@@ -15,7 +15,7 @@ public class Base {
 
     public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {
 
-        FileInputStream fis = new FileInputStream("src/main/java/AppiumFramework/global.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/AppiumFramework/global.properties");
         Properties prop = new Properties();
         prop.load(fis);
         prop.get(appName);
