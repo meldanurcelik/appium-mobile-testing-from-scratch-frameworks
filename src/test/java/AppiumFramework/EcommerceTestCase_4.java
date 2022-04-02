@@ -5,12 +5,12 @@ import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class EcommerceTestCase_4 extends Base {
 
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         AndroidDriver<AndroidElement> driver = capabilities("GeneralStoreApp");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
