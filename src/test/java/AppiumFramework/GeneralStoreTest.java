@@ -16,7 +16,7 @@ public class GeneralStoreTest extends Base {
     @Test
     public void totalValidation() throws IOException, InterruptedException {
 
-        startServer();
+        service = startServer();
 
         AndroidDriver<AndroidElement> driver = capabilities("GeneralStoreApp");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -67,6 +67,7 @@ public class GeneralStoreTest extends Base {
         System.out.println(totalValue + " Total value of products");
         Assert.assertEquals(sum, totalValue);
 
+        service.stop();
     }
 
     public static double getAmount(String value) {

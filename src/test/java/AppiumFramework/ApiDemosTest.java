@@ -14,7 +14,9 @@ public class ApiDemosTest extends Base {
     @Test
     public void apiDemo() throws IOException {
 
-        AndroidDriver<AndroidElement> driver = capabilities("emulator");
+        startServer();
+
+        AndroidDriver<AndroidElement> driver = capabilities("ApiDemosApp");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         HomePage homePage = new HomePage(driver);
@@ -28,6 +30,8 @@ public class ApiDemosTest extends Base {
         driver.findElementByClassName("android.widget.EditText").sendKeys("hello");
 
         preferences.buttons.get(1).click();
+
+        service.stop();
 
     }
 
