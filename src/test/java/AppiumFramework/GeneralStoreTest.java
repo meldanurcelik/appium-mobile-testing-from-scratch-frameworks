@@ -1,5 +1,6 @@
 package AppiumFramework;
 
+import AppiumFramework.PageObjects.CheckoutPage;
 import AppiumFramework.PageObjects.FormPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -14,6 +15,8 @@ public class GeneralStoreTest extends Base {
 
     @Test
     public void totalValidation() throws IOException, InterruptedException {
+
+        startServer();
 
         AndroidDriver<AndroidElement> driver = capabilities("GeneralStoreApp");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -45,15 +48,19 @@ public class GeneralStoreTest extends Base {
         int count = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).size();
         double sum = 0;
 
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+
+
         for (int i = 0; i < count; i++) {
-            String amount1 = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(i).getText();
+            String amount1 = checkoutPage.productList.get(i).getText();
             double amount = getAmount(amount1);
             sum = sum + amount; //280.97+116.97
         }
 
         System.out.println(sum + " sum of products");
 
-        String total = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
+        //total = checkoutPage.totalAmount.getText();
+        String total = checkoutPage.totalAmount.getText();
         total = total.substring(1);
 
         double totalValue = Double.parseDouble(total);

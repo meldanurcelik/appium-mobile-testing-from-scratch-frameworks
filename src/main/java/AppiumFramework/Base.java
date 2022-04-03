@@ -3,6 +3,7 @@ package AppiumFramework;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -12,6 +13,13 @@ import java.net.URL;
 import java.util.Properties;
 
 public class Base {
+
+    public static AppiumDriverLocalService service;
+
+    public void startServer() {
+        service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
+    }
 
     public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {
 

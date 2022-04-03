@@ -22,4 +22,8 @@ public class CheckoutPage {
     @AndroidFindBy(id = "com.androidsample.generalstore:id/totalAmountLbl")
     public WebElement totalAmount;
 
+    public List<WebElement> getProductList() {
+        return productList;
+    }
+
 }
