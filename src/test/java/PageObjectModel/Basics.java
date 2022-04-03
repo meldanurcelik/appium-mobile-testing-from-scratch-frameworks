@@ -23,11 +23,11 @@ public class Basics extends BaseHybrid {
 
         //driver.findElementByXPath("//android.widget.TextView[@content-desc=\"Preference\"]").click();
         //You can call the methods or variables of the class with class object
-        homePage.Preferences.click();
+        homePage.preferences.click();
 
         Preferences preferences = new Preferences(driver);
         //driver.findElementByXPath("//android.widget.TextView[@content-desc=\"3. Preference dependencies\"]").click();
-        preferences.PreferenceDependencies.click();
+        preferences.preferenceDependencies.click();
 
         driver.findElementById("android:id/checkbox").click();
         driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click();
@@ -35,7 +35,7 @@ public class Basics extends BaseHybrid {
 
         //driver.findElementById("android:id/button1").click();
         //driver.findElementByClassName("android.widget.Button").get(1).click();
-        preferences.Buttons.get(1).click();
+        preferences.buttons.get(1).click();
 
     }
 

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class EcommerceTestCase_4 extends Base {
+public class GeneralStoreTest extends Base {
 
     @Test
     public void totalValidation() throws IOException, InterruptedException {

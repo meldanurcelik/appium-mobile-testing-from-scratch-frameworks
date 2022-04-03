@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="D:/Projects/appium-mobile-testing-from-scratch-frameworks/src/test/java/AppiumFramework">
         <classes>
-            <class name="AppiumFramework.EcommerceTestCase_4">
+            <class name="AppiumFramework.GeneralStoreTest">
                 <methods>
                     <include name="totalValidation"/>
                 </methods>

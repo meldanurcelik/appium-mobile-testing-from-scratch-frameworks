@@ -1,4 +1,4 @@
-package PageObjectModel.PageObjects;
+package AppiumFramework.PageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -10,7 +10,6 @@ import java.util.List;
 
 public class Preferences {
 
-    //concatenate driver
     public Preferences(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
