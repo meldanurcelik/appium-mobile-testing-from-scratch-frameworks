@@ -50,7 +50,6 @@ public class GeneralStoreTest extends Base {
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
-
         for (int i = 0; i < count; i++) {
             String amount1 = checkoutPage.productList.get(i).getText();
             double amount = getAmount(amount1);

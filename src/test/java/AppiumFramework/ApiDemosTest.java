@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 public class ApiDemosTest extends Base {
 
     @Test
-    public void apiDemo() throws IOException {
+    public void apiDemo() throws IOException, InterruptedException {
 
-        startServer();
+        service = startServer();
 
         AndroidDriver<AndroidElement> driver = capabilities("ApiDemosApp");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

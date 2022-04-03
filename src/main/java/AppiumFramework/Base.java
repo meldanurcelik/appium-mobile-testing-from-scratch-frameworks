@@ -45,7 +45,12 @@ public class Base {
         return isServerRunning;
     }
 
-    public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException {
+    public static void startEmulator() throws IOException, InterruptedException {
+        Runtime.getRuntime().exec("cmd /c start startEmulator.bat");
+        Thread.sleep(10000);
+    }
+
+    public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException, InterruptedException {
 
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/AppiumFramework/global.properties");
         Properties prop = new Properties();
@@ -57,7 +62,10 @@ public class Base {
 
         DesiredCapabilities cap = new DesiredCapabilities();
 
-        String device = (String) prop.get("device");
+        String device = (String) prop.get("deviceName");
+        if (device.contains("Pixel")) {
+            startEmulator();
+        }
 
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
