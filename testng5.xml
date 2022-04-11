@@ -4,6 +4,7 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="AppiumFramework.Resources.Listeners"/>
+        <listener class-name="AppiumFramework.Resources.ExtentReporterNG"/>
     </listeners>
 
     <test name="Appium Framework" thread-count="5">
