@@ -66,8 +66,9 @@ public class Base {
 
         DesiredCapabilities cap = new DesiredCapabilities();
 
-        String device = (String) prop.get("deviceName");
-        if (device.contains("Pixel")) {
+        //String device = (String) prop.get("deviceName");
+        String device = System.getProperty("deviceName");
+        if (device.contains("emulator")) {
             startEmulator();
         }
 
