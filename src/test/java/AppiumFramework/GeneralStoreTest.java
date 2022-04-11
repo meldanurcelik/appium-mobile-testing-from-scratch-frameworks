@@ -6,6 +6,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -67,6 +68,12 @@ public class GeneralStoreTest extends Base {
         Assert.assertEquals(sum, totalValue);
 
         service.stop();
+    }
+
+    @BeforeTest
+    public void killAllNodes() throws IOException, InterruptedException {
+        Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+        Thread.sleep(3000);
     }
 
     public static double getAmount(String value) {
