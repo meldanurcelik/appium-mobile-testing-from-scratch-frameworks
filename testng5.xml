@@ -9,7 +9,6 @@
 
     <test name="Appium Framework" thread-count="5">
         <classes>
-            <class name="AppiumFramework.GeneralStoreTest"></class>
             <class name="AppiumFramework.ApiDemosTest"></class>
         </classes>
     </test>

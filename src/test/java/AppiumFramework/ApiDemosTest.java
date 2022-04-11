@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ApiDemosTest extends Base {
 
-    @Test
-    public void apiDemo() throws IOException, InterruptedException {
+    @Test(dataProvider = "InputData", dataProviderClass = TestData.class)
+    public void apiDemo(String input) throws IOException, InterruptedException {
 
         service = startServer();
 
@@ -27,7 +27,7 @@ public class ApiDemosTest extends Base {
 
         driver.findElementById("android:id/checkbox").click();
         driver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click();
-        driver.findElementByClassName("android.widget.EditText").sendKeys("hello");
+        driver.findElementByClassName("android.widget.EditText").sendKeys(input);
 
         preferences.buttons.get(1).click();
 
