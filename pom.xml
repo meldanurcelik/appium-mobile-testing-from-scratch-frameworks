@@ -33,7 +33,6 @@
         <commons-validator.version>1.7</commons-validator.version>
         <!-- extentreports -->
         <extentreports.version>4.0.0</extentreports.version>
-
     </properties>
 
     <dependencies>
@@ -169,6 +168,33 @@
                             <configuration>
                                 <suiteXmlFiles>
                                     <suiteXmlFile>testng3.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+
+        <profile>
+            <id>test111</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/java/AppiumFramework/Resources</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>${maven-surefire-plugin.version}</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>testng5.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                         </plugin>
