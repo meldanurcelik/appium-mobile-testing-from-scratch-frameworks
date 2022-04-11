@@ -4,6 +4,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -16,6 +19,7 @@ import java.util.Properties;
 public class Base {
 
     public static AppiumDriverLocalService service;
+    public static AndroidDriver<AndroidElement> driver;
 
     public AppiumDriverLocalService startServer() {
         boolean flag = checkIfServerIsRunnning(4723);
@@ -79,6 +83,11 @@ public class Base {
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(url, cap);
 
         return driver;
+    }
+
+    public static void getScreenshot(String s) throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "/" + s + ".png"));
     }
 
 }

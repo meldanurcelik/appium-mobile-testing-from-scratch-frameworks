@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Appium Framework" thread-count="5">
+    <listeners>
+        <listener class-name="AppiumFramework.Resources.Listeners"/>
+    </listeners>
+
+    <test name="Appium Framework" thread-count="5">
         <classes>
             <class name="AppiumFramework.GeneralStoreTest"></class>
             <class name="AppiumFramework.ApiDemosTest"></class>
