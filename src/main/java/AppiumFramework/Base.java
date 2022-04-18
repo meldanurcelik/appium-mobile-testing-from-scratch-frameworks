@@ -54,6 +54,14 @@ public class Base {
         Thread.sleep(10000);
     }
 
+    public AndroidDriver<AndroidElement> runCapabilities(String appName, Boolean cloud) throws IOException, InterruptedException {
+        if (cloud) {
+            return cloudCapabilities(appName);
+        } else {
+            return capabilities(appName);
+        }
+    }
+
     public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException, InterruptedException {
 
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/AppiumFramework/global.properties");
@@ -82,6 +90,34 @@ public class Base {
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(url, cap);
+
+        return driver;
+    }
+
+
+    public static AndroidDriver<AndroidElement> cloudCapabilities(String appName) throws IOException {
+
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/AppiumFramework/global.properties");
+        Properties prop = new Properties();
+        prop.load(fis);
+        prop.get(appName);
+
+        DesiredCapabilities cap = new DesiredCapabilities();
+
+        // Set your access credentials
+        cap.setCapability("browserstack.user", "meldanurelik_NIXbS5"); // for browserstack
+        cap.setCapability("browserstack.key", "L3eMJpbjdFGwe2dc9pzn"); // for browserstack
+
+        if (appName.equalsIgnoreCase("GeneralStoreApp")) {
+            cap.setCapability("app", "bs://e10543b3ad13f73d05ba451e32b3ebf375590317"); // for browserstack
+        }
+
+        // Specify device and os_version for testing
+        cap.setCapability("device", "Samsung Galaxy S20"); // for browserstack
+        cap.setCapability("os_version", "10.0"); // for browserstack
+
+        // Initialise the remote Webdriver using BrowserStack remote URL and desired capabilities defined above
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://hub.browserstack.com/wd/hub"), cap);
 
         return driver;
     }

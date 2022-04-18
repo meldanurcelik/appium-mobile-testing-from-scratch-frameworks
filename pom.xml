@@ -9,10 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <!-- Java Client -->
-        <javaclient.version>7.6.0</javaclient.version>
+        <javaclient.version>7.0.0</javaclient.version>
         <!-- Selenium Remote Driver -->
         <selenium.version>3.141.59</selenium.version>
         <!-- TestNG -->

@@ -17,9 +17,9 @@ public class GeneralStoreTest extends Base {
     @Test
     public void totalValidation() throws IOException, InterruptedException {
 
-        service = startServer();
+        //service = startServer();
 
-        AndroidDriver<AndroidElement> driver = capabilities("GeneralStoreApp");
+        AndroidDriver<AndroidElement> driver = runCapabilities("GeneralStoreApp", true);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         FormPage formPage = new FormPage(driver);
@@ -67,10 +67,10 @@ public class GeneralStoreTest extends Base {
         System.out.println(totalValue + " Total value of products");
         Assert.assertEquals(sum, totalValue);
 
-        service.stop();
+        //service.stop();
     }
 
-    @BeforeTest
+    //@BeforeTest
     public void killAllNodes() throws IOException, InterruptedException {
         Runtime.getRuntime().exec("taskkill /F /IM node.exe");
         Thread.sleep(3000);
