@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Test Suite" parallel="tests">
+    <test name="Appium Framework ApiDemosTest" thread-count="5">
+        <classes>
+            <class name="AppiumFramework.ApiDemosTest"></class>
+        </classes>
+    </test>
+
+    <test name="Appium Framework GeneralStoreTest" thread-count="5">
+        <classes>
+            <class name="AppiumFramework.GeneralStoreTest"></class>
+        </classes>
+    </test>
+</suite>

@@ -14,9 +14,9 @@ public class ApiDemosTest extends Base {
     @Test(dataProvider = "InputData", dataProviderClass = TestData.class)
     public void apiDemo(String input) throws IOException, InterruptedException {
 
-        service = startServer();
+        //service = startServer();
 
-        AndroidDriver<AndroidElement> driver = capabilities("ApiDemosApp");
+        AndroidDriver<AndroidElement> driver = runCapabilities("ApiDemosApp",true);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         HomePage homePage = new HomePage(driver);
@@ -31,7 +31,7 @@ public class ApiDemosTest extends Base {
 
         preferences.buttons.get(1).click();
 
-        service.stop();
+        //service.stop();
 
     }
 

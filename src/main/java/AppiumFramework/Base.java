@@ -94,7 +94,6 @@ public class Base {
         return driver;
     }
 
-
     public static AndroidDriver<AndroidElement> cloudCapabilities(String appName) throws IOException {
 
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/AppiumFramework/global.properties");
@@ -110,6 +109,8 @@ public class Base {
 
         if (appName.equalsIgnoreCase("GeneralStoreApp")) {
             cap.setCapability("app", "bs://e10543b3ad13f73d05ba451e32b3ebf375590317"); // for browserstack
+        } else if (appName.equalsIgnoreCase("ApiDemosApp")) {
+            cap.setCapability("app", "bs://4727baba7620468160683c7eab951aba84ea7eac"); // for browserstack
         }
 
         // Specify device and os_version for testing
