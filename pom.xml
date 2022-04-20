@@ -131,8 +131,6 @@
             <version>${extentreports.version}</version>
         </dependency>
 
-
-
     </dependencies>
 
     <profiles>
